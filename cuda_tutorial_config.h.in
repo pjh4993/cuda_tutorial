@@ -1,3 +1,4 @@
 #define VERSION_MAJOR @cuda_tutorial_VERSION_MAJOR@
 #define VERSION_MINOR @cuda_tutorial_VERSION_MINOR@
 #cmakedefine USE_CH4
+#cmakedefine USE_CUDA

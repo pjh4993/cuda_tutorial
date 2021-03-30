@@ -3,7 +3,7 @@
 #include "cuda_tutorial_config.h"
 
 #ifdef USE_CH4
-#   include "chapter_4.hpp"
+#   include "chapter_4/vector_sum.hpp"
 #endif
 
 int main(int argc, char **argv) {

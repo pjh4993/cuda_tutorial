@@ -1,3 +1,18 @@
+#include "vector_sum.hpp"
+
+#ifndef USE_CUDA
+
+template<typename T>
+void add(T *a, T *b, T *c, T S){
+    int tid = 0;
+    while(tid < S){
+        c[tid] = a[tid] + b[tid];
+        tid += 1;
+    }
+    tid = 10;
+}
+#else
+
 #include "../common/util.h"
 #include "cuda_runtime.h"
 
@@ -27,3 +42,5 @@ void add(T *a, T *b, T *c, T N){
     cudaFree(dev_b);
     cudaFree(dev_c);
 }
+
+#endif
